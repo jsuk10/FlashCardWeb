@@ -1,0 +1,105 @@
+:root{--bg:#0b0c10;--panel:#111318;--text:#e6e6e6;--muted:#a8b0bf;--accent:#6aa9ff;--accent-2:#9ef0b0;--danger:#ff6b6b;--shadow:0 10px 30px rgba(0,0,0,.45)}
+html,body{height:100%}body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Noto Sans,Apple SD Gothic Neo,Malgun Gothic,sans-serif;background:radial-gradient(1200px 800px at 30% -10%,#121622 0%,var(--bg) 60%);color:var(--text);letter-spacing:.1px}
+.header{max-width:1024px;margin:24px auto 0;padding:0 16px}.header h1{font-size:26px;margin:0 0 8px}.sub{color:var(--muted);font-size:14px;margin:0}
+.toolbar{max-width:1024px;margin:10px auto;padding:0 16px 8px;display:grid;gap:12px;grid-template-columns:1fr auto auto auto;align-items:center}
+.search{display:flex;align-items:center;gap:8px;background:var(--panel);border:1px solid #1b1f2a;border-radius:12px;padding:10px 12px;box-shadow:var(--shadow)}
+.search input{flex:1;background:transparent;color:var(--text);border:0;outline:none;font-size:14px}
+.container{max-width:1024px;margin:16px auto 24px;padding:0 16px}
+.card{position:relative;background:linear-gradient(180deg,#151a27,#111521);border:1px solid #22283b;border-radius:20px;padding:24px;min-height:120px;box-shadow:var(--shadow);display:grid;grid-template-rows:auto 1fr auto;gap:16px}
+.q{font-size:18px;font-weight:700;line-height:1.35}.a{font-size:16px;color:#d7deea;line-height:1.6}.a.hidden{filter:blur(8px);opacity:.5;user-select:none}.controls{display:flex;flex-wrap:wrap;gap:10px}
+button,.chip{background:linear-gradient(180deg,#1a2030,#121621);color:var(--text);border:1px solid #202538;padding:10px 14px;border-radius:12px;cursor:pointer;font-size:14px;transition:transform .06s ease,border-color .2s ease,background .2s ease;box-shadow:var(--shadow)}button:hover{transform:translateY(-1px);border-color:#2a3350}.ghost{background:transparent;border-style:dashed}
+.accent{border-color:#2a3c6a;background:linear-gradient(180deg,#1e2740,#141a2b)}.danger{border-color:#51303a;background:linear-gradient(180deg,#3a1e24,#241116);color:#ffd7d7}
+.progress{display:flex;align-items:center;gap:10px;justify-content:space-between}.bar{position:relative;height:8px;background:#1b2130;border-radius:99px;overflow:hidden;border:1px solid #232a3e}.bar>i{position:absolute;inset:0;width:var(--w,0%);background:linear-gradient(90deg,var(--accent),var(--accent-2))}
+.grid{display:grid;grid-template-columns:1fr;gap:12px;margin-top:14px;color:var(--muted);font-size:13px}
+.kbd{display:inline-block;padding:2px 8px;border-radius:6px;background:#0f1220;border:1px solid #2a3150;color:#d6def9;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+.footer{color:var(--muted);font-size:12px;text-align:center;margin-top:16px}
+.muted{color:var(--muted);font-size:13px}
+@media (min-width:720px){.toolbar{grid-template-columns:1fr auto auto auto auto}}
+
+/* Themed select to match buttons */
+.themed-select{
+  appearance:none;
+  background:linear-gradient(180deg,#1a2030,#121621);
+  color:var(--text);
+  border:1px solid #202538;
+  border-radius:12px;
+  padding:10px 36px 10px 12px;
+  font-size:14px;
+  box-shadow:var(--shadow);
+  position:relative;
+}
+/* dropdown arrow */
+.themed-select{ background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 9l6 6 6-6' stroke='%238aa0c9' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat:no-repeat; background-position:right 10px center; }
+
+/* Interview index list */
+.index-topic{margin:8px 0 6px;font-weight:700}
+.index-list{list-style:none;margin:0 0 12px 0;padding:0;display:grid;gap:6px}
+.index-list li{display:flex;gap:8px;align-items:center}
+.index-list button{padding:8px 10px;border-radius:10px;border:1px solid #202538;background:linear-gradient(180deg,#182032,#111521);font-size:13px}
+.index-list button:hover{transform:translateY(-1px);border-color:#2a3350}
+.index-list .chip{font-size:12px;padding:4px 8px}
+/* Completion message styling */
+.card.complete{outline:2px dashed #2a3c6a; outline-offset:4px}
+.complete .q{font-size:20px}
+
+
+/* --- Themed Inputs & Selects --- */
+.themed-select{
+  appearance:none;
+  background:linear-gradient(180deg,#1a2030,#121621);
+  color:var(--text);
+  border:1px solid #202538;
+  border-radius:12px;
+  padding:10px 36px 10px 12px;
+  font-size:14px;
+  box-shadow:var(--shadow);
+  position:relative;
+}
+.themed-select{ background-image:url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 9l6 6 6-6' stroke='%238aa0c9' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat:no-repeat; background-position:right 10px center; }
+
+.themed-input{
+  background:linear-gradient(180deg,#1a2030,#121621);
+  color:var(--text);
+  border:1px solid #202538;
+  border-radius:12px;
+  padding:10px 12px;
+  font-size:14px;
+  box-shadow:var(--shadow);
+}
+.themed-input::placeholder{ color:#7d89a8; }
+.themed-input:focus, .themed-select:focus{ outline:2px solid #2a3350; outline-offset:1px; }
+
+
+/* Dark theme dropdown list for native selects (best-effort; browser-dependent) */
+select.themed-select, select.themed-select option, select.themed-select optgroup {
+  background-color: #121621;
+  color: var(--text);
+}
+select.themed-select:focus {
+  outline: 2px solid #2a3350;
+  outline-offset: 1px;
+}
+/* Remove default arrow in old IE (harmless elsewhere) */
+select.themed-select::-ms-expand { display: none; }
+
+
+/* Index section alignment fix */
+#indexSection.container{ padding-left:16px; padding-right:16px; }
+#indexSection .card{ margin-left:0; margin-right:0; }
+#indexSection .index-list{ padding-left:0; margin-left:0; }
+
+/* Debug-friendly outline when needed (toggle by adding .debug on body)
+body.debug #indexSection .card{ outline:1px dashed #3a4a7a; } 
+*/
+
+
+select.themed-select, select.themed-select option, select.themed-select optgroup{
+  background-color:#121621;
+  color:var(--text);
+}
+
+
+/* --- Index section layout fix --- */
+#indexSection.container { padding-left: 0; padding-right: 0; }
+#indexSection .card { margin-left: 0; margin-right: 0; }
+#indexSection .index-list { padding-left: 0; margin-left: 0; }
