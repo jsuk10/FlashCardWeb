@@ -5,6 +5,8 @@
 
 > 데모 실행: `index.html`을 더블클릭해서 브라우저로 열면 됩니다. (설치 불필요)
 
+[페이지 링크](https://jsuk10.github.io/FlashCardWeb/)
+
 # Using Vive Coding
 
 ---
